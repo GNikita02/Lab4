@@ -53,3 +53,11 @@ fun checkN(text: String): Int? {
     }
     return n
 }
+
+fun checkA(text: String): Double? {
+    val a = text.trim().replace(',', '.').toDoubleOrNull()
+    if (a == null) {
+        return null
+    }
+    return a
+}
