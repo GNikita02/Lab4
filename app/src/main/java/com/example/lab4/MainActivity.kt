@@ -45,3 +45,11 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
+fun checkN(text: String): Int? {
+    val n = text.trim().toIntOrNull()
+    if (n == null || n <= 0) {
+        return null
+    }
+    return n
+}
