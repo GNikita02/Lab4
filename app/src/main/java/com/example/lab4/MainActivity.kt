@@ -61,3 +61,19 @@ fun checkA(text: String): Double? {
     }
     return a
 }
+
+fun calc(n: Int, a: Double): Double? {
+    var denom = a
+    if (denom == 0.0) {
+        return null
+    }
+    var sum = 1.0 / denom
+    for (k in 1..n) {
+        denom = denom * (a + k)
+        if (denom == 0.0) {
+            return null
+        }
+        sum = sum + 1.0 / denom
+    }
+    return sum
+}
